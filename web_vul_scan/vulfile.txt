@@ -1,0 +1,16 @@
+http://192.168.87.141/pentest/sqli/example7.php?id=2	String SQL injection!
+http://192.168.87.141/pentest/fileincl/example1.php?page=intro.php	RFI vulnerabe!
+http://192.168.87.141/pentest/sqli/example3.php?name=root	String SQL injection!
+http://192.168.87.141/pentest/xss/example4.php?name=hacker	XSS vulnerabe!
+http://192.168.87.141/pentest/codeexec/example3.php?new=hacker&pattern=/lamer/&base=hello%20lamer	XSS vulnerabe!
+http://192.168.87.141/pentest/sqli/example6.php?id=2	Integer SQL injection!
+http://192.168.87.141/pentest/sqli/example4.php?id=2	Integer SQL injection!
+http://192.168.87.141/pentest/sqli/example2.php?name=root	String SQL injection!
+http://192.168.87.141/pentest/xss/example2.php?name=hacker	XSS vulnerabe!
+http://192.168.87.141/pentest/xss/example1.php?name=hacker	XSS vulnerabe!
+http://192.168.87.141/pentest/xss/example5.php?name=hacker	XSS vulnerabe!
+http://192.168.87.141/pentest/sqli/example1.php?name=root	String SQL injection!
+http://192.168.87.141/pentest/xss/example3.php?name=hacker	XSS vulnerabe!
+http://192.168.87.141/pentest/codeexec/example1.php?name=hacker	XSS vulnerabe!
+http://192.168.87.141/pentest/sqli/example5.php?id=2	Integer SQL injection!
+http://192.168.87.141/pentest/xss/example6.php?name=hacker	XSS vulnerabe!

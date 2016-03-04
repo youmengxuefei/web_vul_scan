@@ -1,6 +1,7 @@
 #coding:utf8
 from config import *
 from crawl import *
+from vul_module import vul_module
 
 
 def vulscan(target,thread_num,depth,module,policy,logfile):
@@ -40,6 +41,33 @@ def vulscan(target,thread_num,depth,module,policy,logfile):
 				self.logfile.flush()
 				time.sleep(1)
 				pass
+	'''
+	quit_flag = 0
+	total_url_list = list(TOTAL_URL)
+	while(quit_flag == 0):
+		while True:
+			try:
+				url = total_url_list.pop(0)
+				break
+			except Exception,e:
+				print e
+				if threading.activeCount() == 1:
+					print "All Scan Finish..."
+					quit_flag = 1
+					break
+					#exit(0)
+				time.sleep(1)
+		
+		while True:
+			try:
+				if threading.activeCount() < thread_num:
+					vul_module(url,logfile).start()
+					break
+			except Exception,e:
+				print e
+				time.sleep(1)
+				pass
+	'''
 
 
 	

